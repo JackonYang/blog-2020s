@@ -1,0 +1,3 @@
+[submodule "themes/xoxo"]
+	path = themes/xoxo
+	url = git@github.com:misc-codes/hexo-theme-xoxo.git
