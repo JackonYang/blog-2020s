@@ -4,7 +4,7 @@ comments: true
 ---
 
 - Jackon Yang
-- Deep Learning Engineering / Python / C++ / CUDA
+- 深度学习 / Python / C++ / Nvidia CUDA
 - 上海
 - email: i@jackon.me
 - Github: https://github.com/JackonYang
