@@ -1,6 +1,10 @@
 # .gitignore by JackonYang
 
 
+# hexo
+db.json
+public/
+
 node_modules/
 .obsidian
 
