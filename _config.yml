@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Jackon.me
+subtitle: 'Be a Better Engineer'
+description: 'C++/Python/深度学习'
 keywords:
-author: John Doe
-language: en
+author: Jackon Yang
+language: zh-Hans
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://jackon.me
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
