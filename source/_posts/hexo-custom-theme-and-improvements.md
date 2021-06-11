@@ -227,7 +227,13 @@ npm install hexo-renderer-pandoc --save
 
 基本是 hexo 主题的标配了。实际用的都是 不蒜子。
 
-用法见 [不蒜子官网](https://busuanzi.ibruce.info/)
+用法见 [不蒜子官网](http://ibruce.info/2015/04/04/busuanzi/)
+
+有很多玩法，比如
+
+1. 显示站点总访问量，支持 PV 和 UV 2 种方式
+2. 显示单页面访问量
+3. 只计数不显示
 
 
 # 更多问题

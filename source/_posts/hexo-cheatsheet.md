@@ -19,7 +19,7 @@ hexo clean  # 如果页面渲染出现诡异问题不不生效，可能是缓存
 
 ```bash
 ---
-title: hexo 博客搭建与常见问题解决
+title: hexo 博客搭建与常见问题解决  # 页面上显示的文章标题
 date: 2021-06-11 12:03:36
 tags: [devops, hexo, howto]
 keywords: Hexo, Blog
@@ -36,6 +36,14 @@ indexing: false  # 文章不加入 hexo 自带的站内搜索，一般 true 加�
 hexo c && hexo g && hexo d
 ```
 
+## theme 更新
+
+我用的 git submodule 管理 theme
+
+```bash
+git submodule init  # 仅第一次 clone repo 时需要
+git submodule update
+```
 
 # 详细命令
 
@@ -48,6 +56,15 @@ hexo s  => hexo server     # 启动服务器，会监听文件变动并自动更
 hexo c  => hexo clean      # 清理已生成的内容，发布前，先 clean 再 generate，更安全
 hexo d  => hexo deploy     # 部署
 hexo p  => hexo publish    # 把草稿从 _drafts 移动到 _posts 目录
+```
+
+## node 环境检查
+
+```bash
+node --version
+# v16.3.0
+npm -v
+# 7.16.0
 ```
 
 
