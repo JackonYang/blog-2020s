@@ -16,7 +16,7 @@ tags: [hexo, howto]
 首先要挑个喜欢的主题，抛砖引玉，以下 2 个 link 可以参考：
 
 - 知乎话题：[有哪些好看的 Hexo 主题？](https://www.zhihu.com/question/24422335)
-- hexo官方：[hexo Themes](https://hexo.io/themes/)
+- hexo 官方：[hexo Themes](https://hexo.io/themes/)
 
 我选的 theme 是 [hexo-theme-xoxo](https://github.com/KevinOfNeu/hexo-theme-xoxo)。
 
