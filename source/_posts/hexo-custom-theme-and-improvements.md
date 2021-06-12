@@ -2,6 +2,7 @@
 title: hexo theme 主题更换和体验优化
 date: 2021-06-11 15:16:13
 tags: [hexo, howto]
+mathjax: true
 ---
 
 在[安装 hexo](https://jackon.me/2021/06/11/hexo-blog-setup/) 之后，需要进行一波体验优化。
@@ -179,9 +180,9 @@ indexing: false
 
 如果 theme 不支持，hexo theme 增加 Mathjax 数学公式支持的完整代码，见 [commit/82251d2b3617232496147ca2dd3d62ed762ea2a7](https://github.com/misc-codes/hexo-theme-xoxo/commit/82251d2b3617232496147ca2dd3d62ed762ea2a7)
 
-然后，替换 hexo 默认 markdown 引擎。[为什么要替换 markdown 引擎](https://adores.cc/posts/62947.html#%E6%9B%BF%E6%8D%A2%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E)，我也不知道真假。我换了，用着可以。不换行不行，不知道。
+⚠️ 注意，有的博客提到，[需要替换 markdown 引擎](https://adores.cc/posts/62947.html#%E6%9B%BF%E6%8D%A2%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E)，实测不需要。换成 pandoc 反而有 bug，不能正确显示希腊字母，比如 `\phi` -> $ \phi $。
 
-替换 markdown 引擎的方法，见下文。
+回退 markdown 引擎的 commit: [commit/59c59903a4ea4c3d329d146e1090f4e2d5621fbb](https://github.com/JackonYang/blog-2020s/commit/59c59903a4ea4c3d329d146e1090f4e2d5621fbb)
 
 使用时，在需要引入支持数学公式的文章中，添加 `mathjax: true`
 例如：
@@ -197,31 +198,6 @@ tags: [深度学习, 数学]
 
 Mathjax 数学公式的展示效果：[深度学习为什么使用 cross entropy loss](https://jackon.me/2021/06/06/why-cross-entropy-loss/)
 
-
-# hexo 是 pandoc 作为 markdown 引擎
-
-先安装 pandoc，然后安装 node module。
-
-## 安装 pandoc
-
-Mac 安装 pandoc
-
-```bash
-brew install pandoc
-```
-
-ubuntu 安装 pandoc
-
-```bash
-sudo apt-get install pandoc
-```
-
-## 安装 hexo pandoc 插件
-
-```bash
-npm uninstall hexo-renderer-marked --save
-npm install hexo-renderer-pandoc --save
-```
 
 # 阅读数量统计
 
