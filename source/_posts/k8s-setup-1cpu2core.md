@@ -27,7 +27,7 @@ kubeadm init --ignore-preflight-errors=NumCPU
 
 ### 安装结果
 
-![](http://images.jackon.me/devops-k8s-install-result.png)
+![](//images.jackon.me/devops-k8s-install-result.png)
 
 ### 关键安装信息
 
@@ -169,4 +169,4 @@ kubeadm init --pod-network-cidr=192.168.9.0/16 --ignore-preflight-errors=NumCPU 
 2. ignore-preflight-errors：默认需要 2 核 CPU 2G 内存，我只有 1 core，忽略 CPU 核数报错，继续装。
 3. image-repository：docker 镜像仓库。用阿里云的。
 
-![](http://images.jackon.me/cheers.webp)
+![](//images.jackon.me/cheers.webp)

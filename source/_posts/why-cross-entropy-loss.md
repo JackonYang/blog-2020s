@@ -143,7 +143,7 @@ $$ softmax(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)} $$
 如果用 MSE 计算 loss，
 输出的曲线是波动的，有很多局部的极值点。
 即，非凸优化问题 (non-convex)。
-![non-convex](https://images.jackon.me/2017-12-24-machine-learning-non-convex.jpg)
+![non-convex](//images.jackon.me/2017-12-24-machine-learning-non-convex.jpg)
 
 
 cross entropy 计算 loss，则依旧是一个凸优化问题，
@@ -153,8 +153,8 @@ cross entropy 计算 loss，则依旧是一个凸优化问题，
 最后，定量的理解一下 cross entropy。
 loss 为 0.1 是什么概念，0.01 呢？
 
-![cross-entropy-table](https://images.jackon.me/2017-12-24-machine-learning-cross-entropy-table.jpg)
-![cross-entropy-graph](https://images.jackon.me/2017-12-24-machine-learning-cross-entropy-graph.jpg)
+![cross-entropy-table](//images.jackon.me/2017-12-24-machine-learning-cross-entropy-table.jpg)
+![cross-entropy-graph](//images.jackon.me/2017-12-24-machine-learning-cross-entropy-graph.jpg)
 
 ## 总结
 
