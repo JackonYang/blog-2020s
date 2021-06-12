@@ -3,3 +3,6 @@ g:
 
 s:
 	hexo server
+
+c:
+	hexo clean
