@@ -143,7 +143,7 @@ $$ softmax(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)} $$
 如果用 MSE 计算 loss，
 输出的曲线是波动的，有很多局部的极值点。
 即，非凸优化问题 (non-convex)。
-![non-convex](http://images.jackon.me/2017-12-24-machine-learning-non-convex.jpg)
+![non-convex](https://images.jackon.me/2017-12-24-machine-learning-non-convex.jpg)
 
 
 cross entropy 计算 loss，则依旧是一个凸优化问题，
@@ -153,8 +153,8 @@ cross entropy 计算 loss，则依旧是一个凸优化问题，
 最后，定量的理解一下 cross entropy。
 loss 为 0.1 是什么概念，0.01 呢？
 
-![cross-entropy-table](http://images.jackon.me/2017-12-24-machine-learning-cross-entropy-table.jpg)
-![cross-entropy-graph](http://images.jackon.me/2017-12-24-machine-learning-cross-entropy-graph.jpg)
+![cross-entropy-table](https://images.jackon.me/2017-12-24-machine-learning-cross-entropy-table.jpg)
+![cross-entropy-graph](https://images.jackon.me/2017-12-24-machine-learning-cross-entropy-graph.jpg)
 
 ## 总结
 
@@ -166,7 +166,7 @@ training 之后，validation / testing 时，使用 classification error，更�
 
 ## 参考资料
 
-1. 分类模型的本质是组合数学问题 [A Tutorial on the Cross-Entropy Method](http://eprints.eemcs.utwente.nl/7716/01/fulltext.pdf)
+1. 分类模型的本质是组合数学问题 [A Tutorial on the Cross-Entropy Method](https://eprints.eemcs.utwente.nl/7716/01/fulltext.pdf)
 2. 文中的对比模型来自：[Why You Should Use Cross-Entropy Error Instead Of Classification Error Or Mean Squared Error For Neural Network Classifier Training](https://jamesmccaffrey.wordpress.com/2013/11/05/why-you-should-use-cross-entropy-error-instead-of-classification-error-or-mean-squared-error-for-neural-network-classifier-training/)
-3. 关于 cross entropy 与 MSE 的详细对比：[Cross-Entropy-vs-Squared-Error-Training-a-Theoretical-and-Experimental-Comparison](http://books.jackon.me/Cross-Entropy-vs-Squared-Error-Training-a-Theoretical-and-Experimental-Comparison.pdf)
+3. 关于 cross entropy 与 MSE 的详细对比：[Cross-Entropy-vs-Squared-Error-Training-a-Theoretical-and-Experimental-Comparison](https://books.jackon.me/Cross-Entropy-vs-Squared-Error-Training-a-Theoretical-and-Experimental-Comparison.pdf)
 4. Ng 的公开课中有详细讨论 [logistic regression 的 loss 函数](https://www.coursera.org/learn/machine-learning/lecture/1XG8G/cost-function)
