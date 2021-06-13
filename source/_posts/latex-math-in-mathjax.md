@@ -74,7 +74,7 @@ mathjax: true
 | 箭头 | `\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto` | $\to\, \rightarrow\, \leftarrow\, \Rightarrow\, \Leftarrow\, \mapsto$ | |
 | 逻辑操作 | `\land \lor \lnot \forall \exists \top \bot \vdash \vDash` | $\land\, \lor\, \lnot\, \forall\, \exists\, \top\, \bot\, \vdash\, \vDash$ | |
 | 星号 | `\star \ast \oplus \circ \bullet` | $\star\, \ast\, \oplus\, \circ\, \bullet$ | |
-| 相似运算 | `\approx \sim \simeq \cong \equiv \prec` | $\approx\, \sim \, \simeq\, \cong\, \equiv\, \prec$. | |
+| 等号变体 | `\approx \sim \simeq \cong \equiv \prec \triangleq` | $\approx\, \sim \, \simeq\, \cong\, \equiv\, \prec\ \triangleq$ | |
 | 无穷 | `\infty \aleph_0` | $\infty\, \aleph_0$ | |
 | 复数 | `\Im \Re` | $\Im\, \Re$ | |
 | 多点 | `\ldots`, `\cdots` | $\ldots \cdots$ | $ a_1, a_2, \ldots ,a_n $ |
@@ -119,14 +119,16 @@ mathjax: true
 
 ## 转义与换行
 
-如果在公式中需要直接显示特殊符号，使用`\`进行转义。例如：`\$`-> $\\$$。
+如果在公式中需要直接显示特殊符号，使用`\\`进行转义。例如：`\\$`-> $\\$$。
 
-由于 `\\`表示的是换行，所以这个特殊。要用 `\backslash` -> $\backslash$。
+注意是 2 个 `\`，标准 LaTeX 语法是一个，在 MathJax 里，实测需要 2 个。
+
+`\` 自己，要用 `\backslash` -> $\backslash$。
 
 ## 括号组
 
 - `()[]` 直接用 。例如 $(2+3)[4+4]$
-- `{}` 需要转义 `\{`，`\}`。
+- `{}` 需要转义 `\\{`，`\\}`。$\\{1, 2, \cdots, n\\}$
 - 尖括号`<>`使用`\langle`和`\rangle`来表示：$\langle x \rangle$。
 
 ## 自适应显示
