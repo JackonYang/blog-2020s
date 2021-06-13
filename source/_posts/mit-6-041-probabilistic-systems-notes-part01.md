@@ -60,7 +60,7 @@ outcomes 可能是 Event 中的一个点。
 
 1. Nonnegativity 非负: $ P(A) >= 0 $
 2. Normalization 归一: $ P(\Omega) = 1 $
-3. Additivity 可相加: if $ A \cup B = \phi $ , then $ P(A \cup B) = P(A) + P(B) $
+3. Additivity 可加性: if $ A \cup B = \phi $ , then $ P(A \cup B) = P(A) + P(B) $
 
 基于以上 3 条，可以推出概率论的其他公式。
 
@@ -137,7 +137,7 @@ Conditioning（条件）会改变样本空间。如下图。假定 A 和 B 是�
 
 $$ P(A_i \cap A_j \cap \cdots \cap A_q) = P(A_i)P(A_q)\cdots P(A_q) $$
 
-for any distinct indices $ i, j, \cdots, q$ (chosen from $\{1, \ldots, n\}$)
+for any distinct indices $ i, j, \cdots, q$ (chosen from $\\{1, \ldots, n\\}$)
 
 解释：
 
