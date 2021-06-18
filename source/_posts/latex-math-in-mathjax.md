@@ -170,6 +170,32 @@ MathJax 里，如果在公式中需要直接显示特殊符号，使用`\\`进�
 
 效果：$ \color{red}{x} + \color{blue}{y} $
 
+## 分段函数 piecewise functions
+
+直接看例子，
+
+源码：
+
+```latex
+$$
+X_i =
+\begin{cases}
+1,  & \text{if success in trial }i, \\\\
+0, & \text{otherwise}
+\end{cases}
+$$
+```
+
+效果
+
+$$
+X_i =
+\begin{cases}
+1,  & \text{if success in trial }i, \\\\
+0, & \text{otherwise}
+\end{cases}
+$$
+
 ## 括号组
 
 - `()[]` 直接用 。例如 $(2+3)[4+4]$
