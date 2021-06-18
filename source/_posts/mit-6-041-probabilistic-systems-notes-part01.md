@@ -86,13 +86,15 @@ computing probabilities 就是 counting。
 
 $$ P(A | B) = \frac {P(A\cap B)} {P(B)}$$
 
-另一个形式：
+其中，$ P(A | B) $ undefined if $ P(B) = 0 $
+
+另一个形式，没有了 $ P(B) \neq 0 $ 的约束：
 
 $$ P(A\cap B) = P(B) \cdot P(A | B) $$
 
-$ P(A | B) $ undefined if $ P(B) = 0 $
+条件概率下的可加性：
 
-$$ \text{if } P( A\cap B | C) = 0 , P(A\cup B | C) = P(A|C) + P(B|C) $$
+$$ \text{if } P( A\cap B | C) = 0,\ P(A\cup B | C) = P(A|C) + P(B|C) $$
 
 
 ## 5. Mulltiplication rulle 乘法定理
@@ -107,7 +109,12 @@ $$ P(B)  = P(A_1)P(B | A_1) +P(A_2)P(B | A_2)+...+ P(A_n)P(B | A_n) $$
 
 公式虽简单，但变化可以写一本巨著。理解原理、应用，很重要。
 
-![](//images.jackon.me/bayes-rule-induction.png)
+\begin{align}
+\color{red}{P(A_i|B)} &= \frac {P(A_i \cap B)} {P(B)} \\\\
+         &= \color{red}{ \frac {P(A_i)P(B|A_i)} {P(B)} } \\\\
+         &= \frac {P(A_i)P(B|A_i)} {\sum_j P(A_j) P(B|A_j)}
+\end{align}
+
 
 $ P(A_i) $ is Prior. initial 'beliefs' 先验概率
 
@@ -118,13 +125,14 @@ $ P(A_i | B) $ 后验概率
 
 ## 8. Independence 独立性
 
-$$ defn: P(B | A) = P(B) $$
+\begin{align}
+\text{defn:}\ & P(B | A) = P(B) \\\\
+\text{=>}\ & P(A \cap B) = P(A) \cdot P(B)
+\end{align}
 
-$$ \text{=> } P(A \cap B) = P(A) \cdot P(B) $$
+互斥事件，一般不是独立事件。除非 2 个事件里，有 1 个空集。
 
-互斥事件，一般不是独立事件。除非 2 个事件里，有一个空集。
-
-如果都不是空集，韦恩图，无法确定事件是否独立。需要计算具体 number 来确定。
+如果都不是空集，韦恩图无法确定事件是否独立。需要计算具体 number 来确定。
 
 *Conditioning may affect independence*
 
@@ -137,7 +145,7 @@ Conditioning（条件）会改变样本空间。如下图。假定 A 和 B 是�
 
 $$ P(A_i \cap A_j \cap \cdots \cap A_q) = P(A_i)P(A_q)\cdots P(A_q) $$
 
-for any distinct indices $ i, j, \cdots, q$ (chosen from $\\{1, \ldots, n\\}$)
+for *any distinct indices* $ i, j, \cdots, q$ (chosen from $\\{1, \ldots, n\\}$)
 
 解释：
 
@@ -163,7 +171,6 @@ $$ P(C|(A \cap B)) = 1 $$
 检查相互独立定义的其他公式，也不满足：
 
 $$ P(A \cap B \cap C) = 1/4 \neq 1/8 $$
-
 
 
 # 练习题
