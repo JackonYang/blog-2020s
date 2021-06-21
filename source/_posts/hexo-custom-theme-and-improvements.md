@@ -232,7 +232,7 @@ tags: [深度学习, 数学]
 ---
 ```
 
-Mathjax 数学公式的展示效果：[深度学习为什么使用 cross entropy loss](https://jackon.me/2021/06/06/why-cross-entropy-loss/)
+Mathjax 数学公式的展示效果：[深度学习为什么使用 cross entropy loss](https://jackon.me/article/why-cross-entropy-loss/)
 
 
 # 阅读数量统计
