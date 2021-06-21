@@ -7,29 +7,31 @@ tags: [数学, 笔记]
 
 > 公开课：[MIT 6.041 Probabilistic Systems Analysis and Applied Probability](https://www.youtube.com/watch?v=j9WZyLZCBzs&list=PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8&index=1)
 > video 5-7 of total 25
-> 用另一种数学语言描述 [01.基本概念、贝叶斯和独立性](https://jackon.me/2021/06/08/mit-6-041-probabilistic-systems-notes-part01/) 研究过的问题。
-> 重点是：随机变量、PMF 计算、数学期望和方差。几何分布的 Memoryless Property。
-> 难点是：各种 PMF 计算，数学期望套娃的计算。
-> 另，video 4 counting 先跳过，与 video 13 的伯努利过程一起学。
+> 重点：用另一种数学语言（PMF）描述 [01.基本概念、贝叶斯和独立性](https://jackon.me/2021/06/08/mit-6-041-probabilistic-systems-notes-part01/) 研究过的问题。
+> 难点：多维的条件概率、联合分布、独立性讨论。
+> 另，video 4 (counting) 先跳过，与 video 13 的伯努利过程一起看。
 
 # 心得
 
-1. 随机变量和随机过程，不一样。要区分开。
-2. 独立性，依旧是一个重要议题。在伯努利“独立”重复实验相关的计算中，很实用。
-3. Geometric 和 Binomial 分布的 PMF，期望，方差公式和推导过程。
-4. 随机变量的分布函数 [公式] 在下一篇讨论: 概率论笔记3--连续随机变量、数学期望和方差
+1. 先要深刻理解“*随机变量是函数*”，但又与随机过程不一样，要区分开。
+2. 一维的随机变量相对简单，算是熟悉 PMF 的前菜。
+3. 多维的新概念不多，主要是联合概率分布。但处理实际问题时，需要多练习才能少犯错。
+4. 遇事不决，就画概率分布表格。
+5. 如果把 PMF 和 条件概率理解透了，联合分布、边缘分布、独立性等都应该感觉很简单。
 
 # 重点概念
 
-1. 随机变量的定义：是 function，而非 variable
-2. PMF 公式。how to compute（图）, Geometric, Binomial 计算。
-3. 数学期望。 $ E[g(X)] = \sum_x g(x)p_X(x) $ 的计算。
-4. 方差
-5. 条件 PMF 和条件期望。在新的样本空间里，缩放 PMF。
-6. Geometric PMF 期望计算。Memoryless & Total Expectation theorem
-7. 联合分布和边缘分布。
-8. 独立性。独立联合分布的 E 和 Var 计算。
-9. Binomial means and variance。
+（自测：根据这个提纲，可以回忆起所有知识点）
+
+1. 随机变量 和 PMF 计算：是 function，而非 variable。有 2 个性质。
+2. 数学期望。 加权平均，期望套娃($ E[g(X)] $) 的 hard & easy 计算方法。
+3. 方差和标准差。3 个计算方差的公式。
+4. 条件 PMF 和条件期望。深刻理解：在新的样本空间里，缩放 PMF。
+5. Total Expectation theorem。比较简单，计算有用。
+6. 多维的联合分布和边缘分布。主要公式。用好条件概率就没有新知识，画出分布图更好理解。
+7. 联合分布的独立性。帽子问题，重点练一下。
+8. 经典分布-几何分布。期望，memoryless property
+9. 经典分布-二项分布。期望、方差。
 
 
 ## 1. Random variables 随机变量
@@ -151,9 +153,9 @@ Variance & Standard Variance
 定义，距离 E[X] 的距离的平方的数学期望。
 
 \begin{align}
-\text{var}(X) &= E (X−E[X])^2 \\\\
-              &=\sum_x(x-E[X])^2p_X(x) \\\\
-              &= E[X]^2 - (E[X])^2
+\text{var}(X) &= E [(X−E[X])^2] \\\\
+              &=\sum_x(x-E[X])^2p_X(x) \quad \text{离散的分布，常用}\\\\
+              &= E[X^2] - (E[X])^2 \quad \text{中学数值分析常用}
 \end{align}
 
 推导过程，不难理解。先用套用 Easy 的期望公式 ： $ E[g(X)] = \sum_x g(x)p_X(x) $
@@ -239,9 +241,29 @@ $$ P_X(x) = \sum_{y,z} P_{x,y,z}(x,y,z) $$
 
 
 ## 8. independence 独立性
-X, Y, Z 相互独立： [公式]
 
-注意，此处的 X，Y，Z 来自同一个 sample space。
+X, Y, Z 相互独立的定义：
+
+$$ P\\{X=x_i,\ Y=y_i,\ Z=z_i\\} = P\\{X=x_i\\}P\\{Y=y_i\\}P\\{Z=z_i\\} $$
+
+注意，
+
+- 等式左边是一个点的概率，右边是 3 个边缘概率
+- 此处的 X，Y，Z 来自同一个 sample space。
+
+如果 X、Y 相互独立，则 $g(x)$ 和 $h(y)$ 也相互独立。满足
+
+$$ E[XY] = E[X] E[Y] $$
+$$ E[g(X)h(Y)] = E[g(X)] E[h(Y)] $$
+$$ var(X+Y) = var(X) + var(Y) $$
+
+练习题，看二项分布的期望、方差计算。
+
+练习题：the hat problem
+
+![](//images.jackon.me/math-prob-the-hat-example.png)
+
+TODO 帽子问题的方差计算。
 
 # 经典分布
 
@@ -289,7 +311,10 @@ $$ \text{事件}\quad A_1: {X=1},\ A_2: {X>1} $$
 
 由 Total Expectation theorem 公式，得
 
-$$ E[X] = P(X=1)E[X|X=1] + P(X>1)E[X|X>1] $$
+\begin{align}
+E[X] = &P(X=1)E[X|X=1] \\\\
+       + &P(X>1)E[X|X>1]
+\end{align}
 
 其中，
 
@@ -346,17 +371,16 @@ $$ X = \sum_i X_i $$
 
 数学期望的推导：
 
-$$
+\begin{align}
 E[X_i] &= 1 \cdot p + 0 \cdot (1-p) = p \\\\
 E[X] &= n \cdot p
-$$
+\end{align}
 
 方差的推导：
 
-$$
-E[X_i^2] - E[X_i]^2 &= p - p^2 = p(1-p) \\\\
-\text{Var}(X_i) &= p(1-p)^2 + (1-p)(0-p)^2 \\\\
-\text{Var}(X) &= np(1-p)
-$$
+\begin{align}
+&\text{var}(X_i) = p(1-p)^2 + (1-p)(0-p)^2 = p(1-p) \\\\
+&\text{var}(X) = np(1-p)
+\end{align}
 
-由 $ \text{Var}(X) $ 可知， $ p=1/2 $ 时，方差最大，不确定性最大。
+由 $ \text{var}(X) $ 可知， $ p=1/2 $ 时，方差最大，不确定性最大。
