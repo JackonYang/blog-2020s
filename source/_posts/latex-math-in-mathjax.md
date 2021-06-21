@@ -8,7 +8,7 @@ mathjax: true
 参考文章：
 
 - [MathJax basic tutorial and quick reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
-- [Hexo 支持 LaTeX 写数学公式](https://jackon.me/2021/06/11/hexo-custom-theme-and-improvements/#%E6%94%AF%E6%8C%81-LaTeX-%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F)
+- [Hexo 支持 LaTeX 写数学公式](https://jackon.me/article/hexo-custom-theme-and-improvements/)
 
 # 常用 cheatsheet
 

@@ -5,7 +5,7 @@ tags: [hexo, howto]
 mathjax: true
 ---
 
-在[安装 hexo](https://jackon.me/2021/06/11/hexo-blog-setup/) 之后，需要进行一波体验优化。
+在[安装 hexo](https://jackon.me/article/hexo-blog-setup/) 之后，需要进行一波体验优化。
 
 本文记录我的第一波优化操作，及 github commit link。
 

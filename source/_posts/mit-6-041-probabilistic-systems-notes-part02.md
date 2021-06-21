@@ -7,7 +7,7 @@ tags: [数学, 笔记]
 
 > 公开课：[MIT 6.041 Probabilistic Systems Analysis and Applied Probability](https://www.youtube.com/watch?v=j9WZyLZCBzs&list=PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8&index=1)
 > video 5-7 of total 25
-> 重点：用另一种数学语言（PMF）描述 [01.基本概念、贝叶斯和独立性](https://jackon.me/2021/06/08/mit-6-041-probabilistic-systems-notes-part01/) 研究过的问题。
+> 重点：用另一种数学语言（PMF）描述 [01.基本概念、贝叶斯和独立性](https://jackon.me/article/mit-6-041-probabilistic-systems-notes-part01/) 研究过的问题。
 > 难点：多维的条件概率、联合分布、独立性讨论。
 > 另，video 4 (counting) 先跳过，与 video 13 的伯努利过程一起看。
 
