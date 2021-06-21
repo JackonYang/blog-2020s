@@ -105,6 +105,42 @@ feed:
 支持 RSS 订阅的完整代码，见 [commit/1a24f66d337f0ae6d1b83b33a8ab1ca749cc81c3](https://github.com/JackonYang/blog-2020s/commit/1a24f66d337f0ae6d1b83b33a8ab1ca749cc81c3)
 
 
+# 生成 sitemap
+
+对于 Google SEO，很有用。（TODO -- add SEO links）
+
+使用插件：[hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
+
+先安装 node module，命令如下：
+
+```bash
+npm install hexo-generator-sitemap --save
+```
+
+然后改配置文件 `_config.xml`，增加如下配置：
+
+```javascript
+sitemap:
+  path: sitemap.xml
+  # template: ./sitemap_template.xml
+  rel: false
+  tags: true
+  categories: true
+```
+
+不想加入 sitemap 页面，用 `sitemap: false` 标记，例如：
+
+```bash
+---
+title: lorem ipsum
+date: 2020-01-02
+sitemap: false
+---
+```
+
+支持 RSS 订阅的完整代码，见 [commit/0efa09d32a1374bf312993b669d5ae71fe1132a1](https://github.com/JackonYang/blog-2020s/commit/0efa09d32a1374bf312993b669d5ae71fe1132a1)
+
+
 # 支持站内搜索 search
 
 使用插件：[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
