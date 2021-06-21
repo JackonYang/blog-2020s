@@ -23,6 +23,8 @@ tags: [数学, 笔记]
 
 # 重点概念
 
+（自测：根据这个提纲，可以回忆起所有知识点）
+
 1. sample space 样本空间
 2. Probability axioms 公理（3 条）
 3. Discrete uniform law 古典概型（等可能概型）
