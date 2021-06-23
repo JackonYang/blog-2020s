@@ -127,6 +127,8 @@ $ P(A_i | B) $ 后验概率
 
 ## 8. Independence 独立性
 
+*独立：事件 A 的信息完全并不会改变我们对 B 的认知。*
+
 \begin{align}
 \text{defn:}\ & P(B | A) = P(B) \\\\
 \text{=>}\ & P(A \cap B) = P(A) \cdot P(B)
