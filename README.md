@@ -18,3 +18,9 @@ npm install
 
 make g && make s
 ```
+
+new post example
+
+```bash
+hexo n paper-reading self-driving-survey-on-motion-prediction-and-risk-assessment-2014
+```
