@@ -56,10 +56,11 @@ risk 的定义有 2 层：
 
 典型的 physical collision 预测步骤，分为 2 步：
 
-1. 预测运动物体未来可能的轨迹。也就是前面讨论的 motion prediction
+1. 预测运动物体未来可能的轨迹。
 2. 检查 2 个轨迹上任意两点是否会相撞，并给出轨迹总体的碰撞风险评估。
 
-risk assessment 聚焦在 step 2.
+step 1 就是 paper 前半部分讨论的 motion prediction，
+所以，risk assessment 聚焦在 step 2.
 
 physical collision 的 3 个预测方法：
 
