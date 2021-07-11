@@ -229,13 +229,101 @@ sudo systemctl restart docker
 docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 ```
 
+## ssh 配置
+
+### 生成 ssh key
+
+
+详细说明见：[Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+```bash
+$ mkdir -p ~/.ssh && cd ~/.ssh
+$ ssh-keygen -t rsa -C "gpu-2021@jackon.me"
+```
+
+### 公钥添加到 github
+
+公钥添加到 http://github.com 账号中，详细说明：[Adding a new SSH key to your GitHub accoun](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+
+### 私钥添加到 ssh agent
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add gpu-2021
+ssh -T git@github.com
+# output:
+# Hi JackonYang! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+注意，虽然这个方法广为流传，但这不是 best practice。
+电脑重启以后，就会发现无法 ssh 连接 github 了。
+我推荐用下面的方法永久添加 ssh 私钥
+
+### 永久添加 ssh 私钥
+
+为什么 ssh-add 只是临时添加呢？
+
+stackoverflow 上的讨论：[Add private key permanently with ssh-add on Ubuntu](https://stackoverflow.com/questions/3466626/add-private-key-permanently-with-ssh-add-on-ubuntu)
+
+> ssh-add 这个命令不是用来永久性的记住你所使用的私钥的。
+> 实际上，它的作用只是把你指定的私钥添加到 ssh-agent 所管理的一个 session 当中。
+> 而 ssh-agent 是一个用于存储私钥的临时性的 session 服务，
+> 也就是说当你重启之后，ssh-agent 服务也就重置了。
+
+解决方案很简单：
+
+把私钥文件，配到到 ~/.ssh/config 里。如果没有这个文件，则创建。加入如下内容：
+
+```bash
+IdentityFile ~/.ssh/gpu
+```
+
+在 Mac 上，我额外增加了如下的一段配置
+
+```bash
+Host gpu
+  HostName 192.168.1.66
+  User jackon
+  IdentityFile /Users/jackon/.ssh/m1_key
+```
+
+从 Mac ssh 到 GPU 机器就更简单了，效果如下：
+
+```bash
+ssh gpu
+# 等价于
+ssh -i /Users/jackon/.ssh/m1_key jackon@192.168.1.66
+```
+
 ## 其他工具一把梭
 
 ```bash
-sudo apt-get install tmux ranger git vim htop ncdu nload silversearcher-ag
+sudo apt-get install tmux ranger git vim htop ncdu nload silversearcher-ag flake8
 pip install nvidia-ml-py3
 pip install glances
 ```
+
+注，flake8 是 python 的 pep8 工具，我的 vim 里配置依赖他的 lint 命令。
+
+工具配置
+
+```bash
+# git
+git config --global user.name "Jackon Yang"
+git config --global user.email "i@jackon.me"
+# vim
+git clone git@github.com:JackonYang/vimrc.git ~/.vim
+cd ~/.vim
+./install.sh
+```
+
+其他一些注意事项：
+
+ubuntu 16.04 开始，默认的 vim 只支持 python3，而不支持 python 2.
+
+从 ubuntu 18.04 开始，我的个人开发环境也全部切换至 python3。不再需要 python2 相关的支持。
+
 
 ### glances 介绍
 
