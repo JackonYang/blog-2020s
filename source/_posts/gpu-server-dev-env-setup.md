@@ -8,7 +8,7 @@ tags: [开发环境]
 
 # 环境总体介绍
 
-## 我会大量使用的
+我会大量使用的：
 
 1. 用 GPU 加速代码。工具：Nvidia driver，cuda
 2. 运行不明来源的代码，多 cuda 版本并存。工具：docker
@@ -16,7 +16,7 @@ tags: [开发环境]
 4. 在命令行里工作。工具：tmux，ranger，git，vim。
 5. 故障排查。电脑为什么慢了，磁盘空间为什么没了。对应的工具是：htop、ncdu，nload，nvidia-smi，glances
 
-## 本文不会涉及的
+本文不会涉及的：
 
 1. cuda 环境。裸机不装，都放在 docker 镜像里。多版本切换和共享，更方便。
 2. Tensorflow、jupyter、PyTorch 等的安装。
@@ -29,7 +29,7 @@ tags: [开发环境]
 
 没有为什么，就是觉得帮助不大，但踩到 bug 的概率明显提升了。划不来。
 
-## 为什么不再裸机装 cuda
+_为什么不再裸机装 cuda？_
 
 因为都在 docker 里了。
 
@@ -48,15 +48,11 @@ tags: [开发环境]
 
 # 准备工作
 
-## 操作系统
-
-见：[U 盘安装 Ubuntu20.04](https://jackon.me/article/ubuntu20-04-installation/)
+操作系统安装见：[U 盘安装 Ubuntu20.04](https://jackon.me/article/ubuntu20-04-installation/)
 
 装操作系统时，就顺手装了 ssh server。本文的安装，都是从 Mac 上 ssh 到 GPU 机器上完成的。
 
-## ssh server
-
-在 ubuntu 上安装 ssh server，默认没有安装
+安装 ssh server，默认没有安装
 
 ```bash
 sudo apt-get install openssh-server openssh-client
@@ -64,7 +60,7 @@ sudo /etc/init.d/ssh start
 # [ ok ] Starting ssh (via systemctl): ssh.service.
 ```
 
-## 免密码登录
+免密码登录
 
 ```bash
 ssh-copy-id -i ~/.ssh/m1_key jackon@192.168.1.66
@@ -99,7 +95,7 @@ nvidia-smi
 
 这套安装方法，可以在各个 ubuntu 发行版下安装各种 python 大版本。
 
-### 安装 python
+安装 python
 
 ```
 sudo apt update
@@ -115,7 +111,7 @@ $ python3.9 --version
 Python 3.9.6
 ```
 
-### 安装 pip 和 virtualenv
+安装 pip 和 virtualenv
 
 ```bash
 sudo apt-get install python3-pip python3-dev
@@ -123,6 +119,7 @@ pip3 install virtualenv
 ```
 
 验证 pip 版本
+
 ```bash
 $ pip3 --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
@@ -130,9 +127,7 @@ $ pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 ```
 
-### 配置 pip 源
-
-我一直使用阿里云的镜像源
+pip 源，我一直使用阿里云的镜像源
 
 创建文件 ~/.pip/pip.conf, 添加如下内容
 
@@ -146,7 +141,7 @@ trusted-host = mirrors.aliyun.com
 
 ## docker
 
-### 官方 docker
+### 安装官方 docker
 
 跟着 docker 官网操作即可。
 
@@ -176,23 +171,16 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 # docker run hello-world
 ```
 
-### docker post install
-
-使当前用户不用 sudo 也能运行 docker 命令
+docker post install：使当前用户不用 sudo 也能运行 docker 命令
 
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-### 配置 docker image 源
+配置 docker image 源：使用阿里云的源。官方文档：[https://help.aliyun.com/document_detail/60750.html](https://help.aliyun.com/document_detail/60750.html)
 
-阿里云 docker 镜像的文档：
-
-[https://help.aliyun.com/document_detail/60750.html](https://help.aliyun.com/document_detail/60750.html)
-
-修改 /etc/docker/daemon.json 内容如下
-(阿里镜像，域名里的 a10q86at 要换成自己的)
+修改 /etc/docker/daemon.json 内容如下：(阿里镜像，域名里的 a10q86at 要换成自己的)
 
 ```javascript
 {
@@ -231,22 +219,17 @@ docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
 ## ssh 配置
 
-### 生成 ssh key
-
-
-详细说明见：[Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+生成 ssh key，详细说明见：[Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ```bash
 $ mkdir -p ~/.ssh && cd ~/.ssh
 $ ssh-keygen -t rsa -C "gpu-2021@jackon.me"
 ```
 
-### 公钥添加到 github
-
 公钥添加到 http://github.com 账号中，详细说明：[Adding a new SSH key to your GitHub accoun](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
-### 私钥添加到 ssh agent
+私钥添加到 ssh agent
 
 ```bash
 eval "$(ssh-agent -s)"
@@ -258,11 +241,6 @@ ssh -T git@github.com
 
 注意，虽然这个方法广为流传，但这不是 best practice。
 电脑重启以后，就会发现无法 ssh 连接 github 了。
-我推荐用下面的方法永久添加 ssh 私钥
-
-### 永久添加 ssh 私钥
-
-为什么 ssh-add 只是临时添加呢？
 
 stackoverflow 上的讨论：[Add private key permanently with ssh-add on Ubuntu](https://stackoverflow.com/questions/3466626/add-private-key-permanently-with-ssh-add-on-ubuntu)
 
@@ -271,7 +249,7 @@ stackoverflow 上的讨论：[Add private key permanently with ssh-add on Ubuntu
 > 而 ssh-agent 是一个用于存储私钥的临时性的 session 服务，
 > 也就是说当你重启之后，ssh-agent 服务也就重置了。
 
-解决方案很简单：
+永久添加 ssh 私钥，方法很简单：
 
 把私钥文件，配到到 ~/.ssh/config 里。如果没有这个文件，则创建。加入如下内容：
 
