@@ -277,12 +277,15 @@ ssh -i /Users/jackon/.ssh/m1_key jackon@192.168.1.66
 ## 其他工具一把梭
 
 ```bash
-sudo apt-get install tmux ranger git vim htop ncdu nload silversearcher-ag flake8
+sudo apt-get install tmux ranger git vim htop ncdu nload silversearcher-ag flake8 ctags
 pip install nvidia-ml-py3
 pip install glances
 ```
 
-注，flake8 是 python 的 pep8 工具，我的 vim 里配置依赖他的 lint 命令。
+注：
+
+- flake8 是 python 的 pep8 工具，我的 vim 里配置依赖他的 lint 命令。
+- ctags 是 c 语言的源码自动跳转工具，vim 配置依赖。
 
 工具配置
 
