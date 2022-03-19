@@ -6,3 +6,6 @@ s:
 
 c:
 	hexo clean
+
+install:
+	bash tools/install.sh
