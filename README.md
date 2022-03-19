@@ -17,6 +17,9 @@ make install
 # generate html
 # and start dev server for preview
 make g && make s
+
+# 发布到博客
+make pub
 ```
 
 new post example
