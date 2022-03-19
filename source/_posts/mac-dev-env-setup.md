@@ -114,8 +114,9 @@ You can print a list of completion commands with complete -p and see the source 
 ## brew 快速安装的工具
 
 ```bash
-$ brew install wget
-$ brew install dos2unix
+brew install wget
+brew install dos2unix
+brew install tmux
 ```
 
 ## 下载 & 一键安装的软件
@@ -125,3 +126,7 @@ $ brew install dos2unix
 [ImageOptim](https://imageoptim.com/howto.html) 图片压缩软件，开源免费。写博客传图方便。
 
 [Robo 3T](https://robomongo.org/) MongoDB GUI 客户端
+
+## 我买的付费软件
+
+[Paw](https://paw.cloud/) 比 Postman 更好用的 http client 模拟器
