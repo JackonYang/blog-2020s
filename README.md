@@ -19,7 +19,7 @@ make install
 make g && make s
 
 # 发布到博客
-make pub
+make g && make pub
 ```
 
 new post example
