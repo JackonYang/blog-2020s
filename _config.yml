@@ -67,8 +67,21 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
+# If you want your tags and categories on your language and the URLs still look nice in ASCII,
+# you may use tag_map and category_map parameters in _config.yml file of your blog.
+# You can even set one URL prefix for two different tags.
 category_map:
-tag_map:
+  数学: math
+  开发环境配置: dev-env-setup
+  笔记 & 博客工具: notes-and-blogging-tools
+  深度学习: deep-learning
+  自动驾驶: self-driving
+# tag_map:
+#   tag1: supertag
+#   по-русски: in-russian
+#   fun: fun and jokes
+#   jokes: fun and jokes
+
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

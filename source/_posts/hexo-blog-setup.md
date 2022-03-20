@@ -1,6 +1,7 @@
 ---
 title: hexo 博客搭建与常见问题解决
 date: 2021-06-11 12:03:36
+categories: 笔记 & 博客工具
 tags: [devops, hexo, howto]
 ---
 

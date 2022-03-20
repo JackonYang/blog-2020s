@@ -1,6 +1,7 @@
 ---
 title: hexo cheatsheet -- hexo 常用命令总结
 date: 2021-06-11 20:41:41
+categories: 笔记 & 博客工具
 tags: [hexo, cheatsheet]
 ---
 
@@ -9,9 +10,12 @@ tags: [hexo, cheatsheet]
 ## 写文章
 
 ```bash
-hexo n new-post-name  # 创建新文章的 .md 文件
+hexo n new-post-name  # 创建新 blog 的 .md 文件
+hexo n paper-reading title  # 用 paper-reading 模版创建新 blog
+
 hexo g && hexo s  # 生成静态网页并打开预览服务器
 # 在浏览器中打开 localhost:4000
+
 hexo clean  # 如果页面渲染出现诡异问题不不生效，可能是缓存导致。清理缓存
 ```
 
@@ -24,6 +28,7 @@ date: 2021-06-11 12:03:36
 tags: [devops, hexo, howto]
 keywords: Hexo, Blog
 description: 这个东西可能有利于 SEO
+categories: 文章分类，1 篇文章只能有 1 个分类
 mathjax: true  # 启用数学公式支持，一般 false
 indexing: false  # 文章不加入 hexo 自带的站内搜索，一般 true 加入
 ---

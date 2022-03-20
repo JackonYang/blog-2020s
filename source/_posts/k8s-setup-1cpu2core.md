@@ -1,6 +1,7 @@
 ---
 title: 【k8s】搭 k8s 集群--使用 1核 和 2G 内存的机器
 date: 2021-04-22 13:27:10
+categories: DevOps
 tags: [devops, k8s, howto]
 ---
 

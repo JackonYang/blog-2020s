@@ -1,6 +1,7 @@
 ---
 title: 【Paper Reading】An Adaptive Peer-to-Peer Collision Warning System
 date: 2021-06-28 23:42:16
+categories: 自动驾驶
 tags: [自动驾驶, motion prediction, safety assessment]
 mathjax: true
 ---

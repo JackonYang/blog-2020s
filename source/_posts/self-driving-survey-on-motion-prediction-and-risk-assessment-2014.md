@@ -1,6 +1,7 @@
 ---
 title: 【Paper Reading】A survey on motion prediction and risk assessment for intelligent vehicle
 date: 2021-06-27 01:46:33
+categories: 自动驾驶
 tags: [自动驾驶, motion prediction, safety assessment]
 ---
 

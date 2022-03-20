@@ -2,6 +2,7 @@
 
 powered by Hexo, cheers!
 
+## 常用 debug 命令
 
 ```bash
 # install hexo
@@ -22,10 +23,15 @@ make g && make s
 make g && make pub
 ```
 
-new post example
+
+## 常用 blog 管理命令
+
+更多命令: [hexo cheatsheet -- hexo 常用命令总结](https://jackon.me/article/hexo-cheatsheet/)
 
 ```bash
-hexo n paper-reading self-driving-survey-on-motion-prediction-and-risk-assessment-2014
+hexo n new-post-name  # 创建新 blog 的 .md 文件
+
+hexo n paper-reading title  # 用 paper-reading 模版创建新 blog
 ```
 
 ## Notes

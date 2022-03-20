@@ -2,6 +2,7 @@
 title: 【MIT 概率公开课】01.基本概念、贝叶斯和独立性
 date: 2021-06-08 22:32:33
 mathjax: true
+categories: 数学
 tags: [数学, 笔记]
 ---
 

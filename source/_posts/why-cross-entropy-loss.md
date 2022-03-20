@@ -2,6 +2,7 @@
 title: 深度学习为什么使用 cross entropy loss
 date: 2021-06-06 01:04:05
 mathjax: true
+categories: 深度学习
 tags: [深度学习, 数学]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Vim plugin 的设计与原理
 date: 2013-03-18 15:33:50
+categories: 开发环境配置
 tags: vim
 ---
 

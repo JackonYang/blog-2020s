@@ -1,6 +1,7 @@
 ---
 title: MathJax 中常用的 Latex 命令 cheatsheet
 date: 2021-06-12 10:08:57
+categories: 笔记 & 博客工具
 tags: [MathJax, Latex, cheatsheet]
 mathjax: true
 ---

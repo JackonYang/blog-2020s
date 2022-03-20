@@ -2,6 +2,7 @@
 title: 【MIT 概率公开课】03.连续随机变量的 PDF、数学期望和方差
 date: 2021-06-23 00:29:00
 mathjax: true
+categories: 数学
 tags: [数学, 笔记]
 ---
 

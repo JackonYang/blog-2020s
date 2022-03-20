@@ -2,6 +2,7 @@
 title: 【MIT 概率公开课】02.离散随机变量的 PMF、数学期望和方差
 date: 2021-06-08 23:32:33
 mathjax: true
+categories: 数学
 tags: [数学, 笔记]
 ---
 

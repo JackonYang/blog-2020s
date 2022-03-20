@@ -1,6 +1,7 @@
 ---
 title: hexo theme 主题更换和体验优化
 date: 2021-06-11 15:16:13
+categories: 笔记 & 博客工具
 tags: [hexo, howto]
 mathjax: true
 ---
