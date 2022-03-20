@@ -1,7 +1,8 @@
 ---
-title: 2021 年的炼丹环境 -- GPU 服务器搭建 Ubuntu 20.04 开发环境
+title: 炼丹环境配置 -- GPU + Ubuntu 20.04
 date: 2021-07-11 14:35:20
-tags: [开发环境]
+categories: 开发环境配置
+tags: [Ubuntu, GPU]
 ---
 
 先简单介绍一下我的主要使用场景和习惯，然后再讲搭建步骤。

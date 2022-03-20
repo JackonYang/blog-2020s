@@ -1,7 +1,8 @@
 ---
 title: Mac 开发环境配置
 date: 2022-03-19 21:41:29
-tags: [Mac, 开发环境, howto]
+categories: 开发环境配置
+tags: [Mac]
 mathjax: false
 ---
 

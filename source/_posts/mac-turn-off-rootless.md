@@ -1,7 +1,8 @@
 ---
 title: Mac 关闭 SIP (Rootless 机制) 并在根目录创建文件夹
 date: 2022-03-19 17:34:01
-tags: [Mac, 开发环境, howto]
+categories: 开发环境配置
+tags: [Mac, security]
 mathjax: false
 ---
 

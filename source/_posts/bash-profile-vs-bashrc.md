@@ -1,6 +1,7 @@
 ---
 title: bash_profile_vs_bashrc
 date: 2021-07-17 15:33:39
+categories: 开发环境配置
 tags: [linux, 有趣但没用的知识]
 ---
 

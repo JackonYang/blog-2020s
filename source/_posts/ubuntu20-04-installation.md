@@ -1,7 +1,8 @@
 ---
 title: U 盘安装 Ubuntu20.04
 date: 2021-07-11 00:38:39
-tags: [开发环境]
+categories: 开发环境配置
+tags: [Ubuntu]
 ---
 
 # 制作 U 盘启动盘

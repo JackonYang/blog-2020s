@@ -1,7 +1,8 @@
 ---
 title: 2020 年代，Linux 电脑磁盘分区的最佳实践
 date: 2021-07-11 01:28:43
-tags: [rethink, howto]
+categories: 开发环境配置
+tags: [linux, disk]
 ---
 
 # 背景
