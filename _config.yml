@@ -71,6 +71,7 @@ default_category: uncategorized
 # you may use tag_map and category_map parameters in _config.yml file of your blog.
 # You can even set one URL prefix for two different tags.
 category_map:
+  育儿: parenting
   数学: math
   开发环境配置: dev-env-setup
   笔记 & 博客工具: notes-and-blogging-tools

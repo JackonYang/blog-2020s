@@ -7,7 +7,7 @@ s:
 c:
 	hexo clean
 
-pub:
+p:
 	scp -r  public/* root@jackon.me:/mnt/data/site-jackon-me/
 
 install:
