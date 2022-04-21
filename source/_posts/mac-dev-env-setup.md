@@ -28,7 +28,7 @@ mkdir -p ~/data   # 我的目录是：/Users/jackon/data
 
 # 编辑 /etc/synthetic.conf，内容如下
 % cat /etc/synthetic.conf
-data	/Users/jackon/data
+data /Users/jackon/data
 
 # 重启系统
 sudo reboot
@@ -45,7 +45,6 @@ SIP (System Integrity Protection) 是 Mac 特有的安全机制。开发者一�
 
 详见：[Mac 关闭 SIP (Rootless 机制) 并在根目录创建文件夹](https://jackon.me/article/mac-turn-off-rootless/)
 
-
 ## 安装 Xcode 相关
 
 Xcode 是苹果官方提供的一个开发包，包含编译器、开发库、开发工具等。xcode command line tools 包含 git 等常用开发工具。
@@ -60,13 +59,11 @@ Xcode 是苹果官方提供的一个开发包，包含编译器、开发库、�
 xcode-select --install
 ```
 
-
 ## homebrew
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
 
 ## Git 与自动补全
 
@@ -96,21 +93,26 @@ bash-completion 是自动补全用的。
 
 官方文档摘录如下:
 
--   Command names after `sudo` and `which`
--   `Macports` and `Homebrew` package names (optional)
--   Hostnames in `known_hosts` for commands like `ssh`
--   Folders on CDPATH
+- Command names after `sudo` and `which`
+- `Macports` and `Homebrew` package names (optional)
+- Hostnames in `known_hosts` for commands like `ssh`
+- Folders on CDPATH
 
 You can print a list of completion commands with complete -p and see the source of a function with declare -f
 
-
 ## vscode
 
-下载：https://code.visualstudio.com/
+下载：<https://code.visualstudio.com/>
 
 运行 vscode 并打开命令面板 (⇧⌘P)，然后输入 `install code` 找到对应的命令并执行。
 
 ![](https://tva1.sinaimg.cn/large/e6c9d24egy1h0fk62v601j20wm0dut9a.jpg)
+
+## C/C++ 环境
+
+```bash
+brew install clang-format # vscode 依赖的 format 工具
+```
 
 ## brew 快速安装的工具
 
@@ -118,6 +120,7 @@ You can print a list of completion commands with complete -p and see the source 
 brew install wget
 brew install dos2unix
 brew install tmux
+brew install the_silver_searcher # ag 命令，grep 的升级版
 ```
 
 ## 下载 & 一键安装的软件
