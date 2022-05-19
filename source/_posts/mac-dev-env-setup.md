@@ -114,6 +114,40 @@ You can print a list of completion commands with complete -p and see the source 
 brew install clang-format # vscode 依赖的 format 工具
 ```
 
+cmake: <https://cmake.org/install/>
+
+```
+arch -arm64 brew install cmake
+```
+
+## Docker & Docker compose
+
+<https://docs.docker.com/desktop/mac/install/>
+
+包含了 docker 和 docker-compsoe
+
+## heaptrack
+
+失败，只有 heaptrack_print binary，没有 heaptrack
+
+依赖
+
+```bash
+brew install cmake
+brew install Boost
+brew install zstd
+```
+
+编译：
+
+```bash
+cd heaptrack # i.e. the source folder
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release .. # look for messages about missing dependencies!
+make -j$(nproc)
+```
+
 ## brew 快速安装的工具
 
 ```bash
